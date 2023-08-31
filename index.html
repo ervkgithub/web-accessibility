@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Accessibility Issue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+    id="bootstrap-css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  
+  <!-- Header -->
+  <nav class="navbar navbar-expand-xl nav_area">
+    <div class="container-fluid">
+      <div class="logo">
+        <a href="" class="logo-light">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto navbar-center main_menu onepage_nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#contrastissue">Web Accessibility Issue</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+
+  <!-- Sidebar Left -->
+
+  <main class="wrapper">
+    <div class="container mt-5 mb-5">
+      <div class="row panel-wrap">
+        <div class="col-md-3" id="#contrastissue">
+          <h6>Accessibility Issue Type</h6>
+          <div class="list-group">
+            <a href="#contrastissue" class="list-group-item list-group-item-action active first">Contrast
+              Error</a>
+            <a href="#langissue" class="list-group-item list-group-item-action">1 X Language missing or invalid
+            </a>
+            <a href="#altissue" class="list-group-item list-group-item-action">Alternative text missing
+            </a>
+            <a href="#emptyheading" class="list-group-item list-group-item-action">Empty heading</a>
+            <a href="#emptybtn" class="list-group-item list-group-item-action">Empty button</a>
+            <a href="#labelissue" class="list-group-item list-group-item-action">Missing form label & Empty
+              Form Label</a>
+            <a href="#emptylink" class="list-group-item list-group-item-action">Empty link</a>
+            <a href="#linkimg" class="list-group-item list-group-item-action">Linked image missing
+              alternative text</a>
+            <a href="#spacerimg" class="list-group-item list-group-item-action">Spacer image missing
+              alternative text</a>
+            <a href="#labelmissingcaptcha" class="list-group-item list-group-item-action">Missing form label(Google
+              Captcha)</a>
+          </div>
+        </div>
+        <!-- Panel Left Side -->
+        <div class="col-md-9">
+          <div class="conitent-list">
+
+            <div id="contrastissue" class="content active">
+              <h1 class="mb-4 text-danger">Contrast Error</h1>
+
+              <p>Fail Foreground color: #0000FF</p>
+              <p>Fail Background color: ##808080</p>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <h2>Normal Text</h2>
+                  <div class="results">
+                    <p>
+                      WCAG AA: <span id="normalAA" class="fail">Fail</span>
+                    </p>
+                    <p>
+                      WCAG AAA: <span id="normalAAA" class="fail">Fail</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <span id="normal" style="
+                        color: rgb(0, 0, 255);
+                        background-color: rgb(186, 186, 186);
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      ">The five boxing wizards jump quickly.</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <h2>Large Text</h2>
+                  <div class="results">
+                    <p>WCAG AA: <span id="bigAA" class="pass">Pass</span></p>
+                    <p>
+                      WCAG AAA: <span id="bigAAA" class="fail">Fail</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <span id="big" style="
+                        color: rgb(0, 0, 255);
+                        background-color: rgb(186, 186, 186);
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      ">The five boxing wizards jump quickly.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="langissue" class="content">
+              <h1 class="text-danger">1 X Language missing or invalid</h1>
+            </div>
+
+            <div id="altissue" class="content">
+              <h1 class="text-danger">Alternative text missing</h1>
+              <img src="/issue/images/accessibility.jpg" width="350" />
+            </div>
+
+            <div id="emptyheading" class="content">
+              <h1 class="text-danger">Empty heading</h1>
+              <h3></h3>
+            </div>
+
+            <div id="emptybtn" class="content">
+              <h1 class="text-danger">Empty button</h1>
+              <button class="btn btn-danger"></button>
+            </div>
+
+            <div id="labelissue" class="content">
+              <h1 class="text-danger mt-2 mb-3">Missing form label & Empty Form Label</h1>
+              <form>
+                <input type="text" />
+                <label>
+                  <input type="password" />
+                </label>
+              </form>
+            </div>
+
+            <div id="emptylink" class="content">
+              <h1 class="mt-2 mb-2 text-danger">Empty link</h4>
+                <a href="#"></a>
+            </div>
+
+            <div id="linkimg" class="content">
+              <h1 class="text-danger mt-2 mb-2">Linked image missing alternative text</h1>
+              <a href="https://equalizedigital.com/">
+                <img
+                  src="data:image/png;base64,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"
+                  class="img-responsive" width="250">
+              </a>
+              <a href="https://equalizedigital.com/">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="" class="img-responsive" width="250">
+              </a>
+            </div>
+
+            <div id="spacerimg" class="content">
+              <h1 class="text-danger">Spacer image missing alternative text</h1>
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td><img src="spacer.gif" width="100" height="10"></td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="labelmissingcaptcha" class="content">
+              <h1 class="text-danger">Form label missing captcha</h1>
+              <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response">
+            </textarea>
+            </div>
+
+          </div>
+        </div>
+        <!-- Panel Right Side -->
+      </div>
+      <!-- Panel Row -->
+    </div>
+    <!-- Container -->
+    <!-- Sidebar Left -->
+  </main>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item">
+              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 pb-4">
+            © All right Reversed.<a class="text-green ml-2" href="#" target="_blank">Altudo</a>
+          </p>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
