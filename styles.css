@@ -1,5 +1,30 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+.logo a{
+	color: #fff;
+}
+
+.logo a:hover{
+	text-decoration: none;
+	color:#fff;
+}
+
+nav ul li a{
+	color: #fff;
+}
+
+nav ul li a:hover{
+	color: #9c9c9c;
+}
+
+h1,h2,h3{
+	font-size: 28px;
+}
+
+h4{
+	font-size: 22px;
+}
+
 .wrapper {
 	min-height: calc(100vh - 150px);
 }
@@ -8,6 +33,10 @@
 	.container {
 		max-width: 1250px;
 	}
+}
+
+.red{
+	color: red;
 }
 
 nav {
