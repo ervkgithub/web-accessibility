@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accessibility Issue with Solution</title>
+  <title>Accessibility Solution</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
     id="bootstrap-css" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/accessibility-solution/styles.css" />
 </head>
 
 <body>
@@ -24,26 +25,14 @@
             <a class="nav-link" href="https://webaim.org/resources/contrastchecker" target="_blank">Contrast Checker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"
-              href="https://accessibility101.course.uiowa.edu/accessibility-demos/nvda-screen-reader-demo"
-              >Screen Reader</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-              href="https://webaim.org/techniques/keyboard/"
-              >Keyboard Navigation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-              href="https://www.schwartz.co.uk/products/herbs-and-spices/chillies/chilli-powder-hot"
-              >Keyboard Navigation Demo</a>
+            <a class="nav-link" href="/screen-reader.html">Screen Reader Demo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"
               href="https://wcag.com/resource/what-is-wcag/#:~:text=WCAG%20isn't%20a%20legal,intellectual%2C%20learning%20and%20physical%20disabilities"
               target="_blank">WCAG</a>
           </li>
-          
+
         </ul>
       </div>
     </div>
@@ -80,12 +69,9 @@
         <div class="col-md-9">
           <div class="conitent-list">
             <div id="langissue" class="content active">
-              <h2 class="text-danger"><strong class="red">Issue:</strong> 1 X Language missing or invalid</h2>
-              &lt;html&gt;
               <div class="solution">
-                <br>
                 <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
+                  <strong style="color: #0964c7;">Solution:</strong>
                   html tag should be declared with lang attribute like.
                 </h4>
                 <code>
@@ -95,56 +81,7 @@
             </div>
 
             <div id="contrastissue" class="content">
-              <h2 class="mb-4 text-danger"><strong class="red">Issue:</strong> Contrast Error</h2>
-              <div>Fail Foreground color: #0000FF</div>
-              <div>Fail Background color: #808080</div>
-              <div class="row">
-                <div class="col-md-6">
-                  <h2>Normal Text</h2>
-                  <div class="results">
-                    <p>
-                      WCAG AA: <span id="normalAA" class="fail">Fail</span>
-                    </p>
-                    <p>
-                      WCAG AAA: <span id="normalAAA" class="fail">Fail</span>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <span id="normal" style="
-                        color: #0000FF;
-                        background-color: #808080;
-                        height: 60px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                      ">The five boxing wizards jump quickly.</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <h2>Large Text</h2>
-                  <div class="results">
-                    <p>WCAG AA: <span id="bigAA" class="fail">Fail</span></p>
-                    <p>
-                      WCAG AAA: <span id="bigAAA" class="fail">Fail</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <span id="big" style="
-                        color: #0000FF;
-                        background-color: #808080;
-                        height: 60px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                      ">The five boxing wizards jump quickly.</span>
-                </div>
-              </div>
               <div class="solution">
-                <br>
                 <h4 class="text-success">
                   <strong style="color: blue;">Solution:</strong>
                   For the contrast issue fixes we have multiple things needs to keep in mind before fixing it.
@@ -154,6 +91,7 @@
                       href="https://webaim.org/resources/contrastchecker" target="_blank">Contrast Checker</a></li>
                   <li>Client should agreed on changing the color as it may doesn't follow the brand guidelines.</li>
                   <li>UX/Graphics Team can help more on this as which color is best suitable for Accessibility.</li>
+                  <li>Color Contrast should be in at least 4:5:1</li>
                 </ul>
                 <div>Fail Foreground color: #00006B</div>
                 <div>Fail Background color: #ABABAB</div>
@@ -206,30 +144,21 @@
             </div>
 
             <div id="altissue" class="content">
-              <h1 class="text-danger"><strong class="red">Issue:</strong> Alternative text missing</h1>
-              &lt;img src="/accessibility.jpg" width="350" /&gt;<br>
-              <img src="/accessibility.jpg" width="350" />
               <div class="solution">
-                <br>
                 <h4 class="text-success">
                   <strong style="color: blue;">Solution:</strong>
                   Image should have the descriptive alternative text.
                 </h4>
                 <code>
                   &lt;img src="/accessibility2.jpg" width="350" alt="Accessibility" /&gt; <br>
-                  <img class="mt-3 mb-3" src="/accessibility.jpg" width="350" />
+                  <img class="mt-3 mb-3" src="/accessibility.jpg" width="350" alt="Accessibility" />
                 </code>
               </div>
 
             </div>
 
             <div id="emptyheading" class="content">
-              <h1 class="text-danger"><strong class="red">Issue:</strong> Empty heading</h1>
-              <code>
-                &lt;h1&gt;&lt;/h1&gt;
-              </code>
               <div class="solution">
-                <br>
                 <h4 class="text-success">
                   <strong style="color: blue;">Solution:</strong>
                   Empty or Blank heading (h1 to h6) should not be rendered on front-end. It should have the descriptive
@@ -242,12 +171,6 @@
             </div>
 
             <div id="emptybtn" class="content">
-              <h1 class="text-danger">
-                <strong class="red">Issue:</strong> Empty button
-              </h1>
-              &lt;button class="btn btn-danger"&gt;&lt;/button&gt;
-              <br><br>
-              <button class="btn btn-danger"></button>
               <div class="solution">
                 <br>
                 <h4 class="text-success">
@@ -264,21 +187,11 @@
             </div>
 
             <div id="labelissue" class="content">
-              <h1 class="text-danger mt-2 mb-3"><strong class="red">Issue:</strong> Missing form label & Empty Form
-                Label</h1>
-              <code>
-              &lt;form&gt;<br>
-                &lt;input type="text" /&gt;<br>
-                &lt;label&gt;
-                  &lt;input type="password" /&gt;
-                &lt;/label&gt;<br>
-              &lt;/form&gt;
-            </code>
               <div class="solution">
                 <br>
                 <h4 class="text-success">
                   <strong style="color: blue;">Solution:</strong>
-                    Any form element should have descriptive with arialabe-by attribute. 
+                  Any form element should have descriptive with arialabe-by attribute.
                 </h4>
                 <code>
                   &lt;form&gt;<br>
@@ -293,63 +206,40 @@
             </div>
 
             <div id="emptylink" class="content">
-              <h1 class="mt-2 mb-2 text-danger"><strong class="red">Issue:</strong> Empty link</h4>
-                &lt;a href="#"&gt;&lt;/a&gt;
-                <div class="solution">
-                  <br>
-                  <h4 class="text-success">
-                    <strong style="color: blue;">Solution:</strong>
-                    Any empty link or anchor tag should not be rendered front-end. It should have some any descriptive link text.
-                  </h4>
-                  <code>
+              <div class="solution">
+                <h4 class="text-success">
+                  <strong style="color: blue;">Solution:</strong>
+                  Any empty link or anchor tag should not be rendered front-end. It should have some any descriptive
+                  link text.
+                </h4>
+                <code>
                     &lt;a href="#"&gt;Read More Link&lt;/a&gt;
                   </code>
-                </div>
+              </div>
             </div>
 
             <div id="linkimg" class="content">
-              <h1 class="text-danger mt-2 mb-2"><strong class="red">Issue:</strong> Linked image missing alternative
-                text</h1><br/>
-              &lt;a href="#"&gt;
-                &lt;img
-                  src="/accessibility2.jpg"
-                  class="img-responsive" width="250"&gt;
-              &lt;/a&gt;
-              <br><br>
-              &lt;a href="#"&gt;
-                &lt;img
-                  src="/accessibility2.jpg"
-                  alt="" class="img-responsive" width="250"&gt;
-              &lt;/a&gt;
               <div class="solution">
                 <br>
                 <h4 class="text-success">
                   <strong style="color: blue;">Solution:</strong>
-                  Any linked image should have descriptive alternative text. 
-                </h4><br/>
+                  Any linked image should have descriptive alternative text.
+                </h4><br />
                 &lt;a href="#"&gt;
                 &lt;img
-                  src="/accessibility2.jpg"
-                  class="img-responsive" alt="Accessibility" width="250"&gt;
-              &lt;/a&gt;
-              <br><br>
-              &lt;a href="#"&gt;
+                src="/accessibility2.jpg"
+                class="img-responsive" alt="Accessibility" width="250"&gt;
+                &lt;/a&gt;
+                <br><br>
+                &lt;a href="#"&gt;
                 &lt;img
-                  src="/accessibility2.jpg"
-                  alt="Accessibility" class="img-responsive" width="250"&gt;
-              &lt;/a&gt;
+                src="/accessibility2.jpg"
+                alt="Accessibility" class="img-responsive" width="250"&gt;
+                &lt;/a&gt;
               </div>
             </div>
 
             <div id="spacerimg" class="content">
-              <h1 class="text-danger">
-                <strong class="red">Issue:</strong> Spacer image missing alternative text
-              </h1>
-              <table cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td><img src="spacer.jpg" width="100" height="10"></td>
-                </tr>
-              </table>
               <div class="solution">
                 <br>
                 <h4 class="text-success">
@@ -365,14 +255,12 @@
             </div>
 
             <div id="labelmissingcaptcha" class="content">
-              <h1 class="text-danger"><strong class="red">Issue:</strong> Form label missing captcha</h1>
-              <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response">
-            </textarea>
               <div class="solution">
                 <br>
                 <h4 class="text-success">
                   <strong style="color: blue;">Solution:</strong>
-                  Missing form label google captcha issue can be resolved in little different way since it is throw run time, so for the fix this issue, we need write below script code.
+                  Missing form label google captcha issue can be resolved in little different way since it is throw run
+                  time, so for the fix this issue, we need write below script code.
                 </h4>
                 <code>
                   $(window).on('load', function () {   <br>
@@ -400,14 +288,6 @@
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
           <ul class="list-unstyled list-inline social text-center">
             <li class="list-inline-item">
-              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a>
-            </li> <li class="list-inline-item">
               <a href="https://www.fiverr.com/share/qb8D02" title="Facebook"><i class="fa fa-facebook"></i></a>
             </li>
             <li class="list-inline-item">
@@ -423,7 +303,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
           <p class="h6 pb-4">
-            © All rights Reserved <a class="text-green ml-2" href="#" target="_blank">@Altudo</a>
+            © All rights Reserved @Altudo
           </p>
         </div>
         <hr />
