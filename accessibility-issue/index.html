@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- <html lang="en"> -->
 
 <head>
   <meta charset="UTF-8" />
@@ -74,16 +73,6 @@
             <div id="langissue" class="content active">
               <h2 class="text-danger"><strong class="red">Issue:</strong> 1 X Language missing or invalid</h2>
               &lt;html&gt;
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  html tag should be declared with lang attribute like.
-                </h4>
-                <code>
-                  &lt;html lang="eng"&gt;
-                </code>
-              </div>
             </div>
 
             <div id="contrastissue" class="content">
@@ -135,37 +124,12 @@
                       ">The five boxing wizards jump quickly.</span>
                 </div>
               </div>
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  For the contrast issue fixes we have multiple things needs to keep in mind before fixing it.
-                </h4>
-                <ul>
-                  <li>We can verify contrast error on Contrast checker Website <a
-                      href="https://webaim.org/resources/contrastchecker" target="_blank">Contrast Checker</a></li>
-                  <li>Client should agreed on changing the color as it may doesn't follow the brand guidelines.</li>
-                  <li>UX/Graphics Team can help more on this as which color is best suitable for Accessibility.</li>
-                </ul>
-              </div>
             </div>
 
             <div id="altissue" class="content">
               <h1 class="text-danger"><strong class="red">Issue:</strong> Alternative text missing</h1>
               &lt;img src="/accessibility.jpg" width="350" /&gt;<br>
               <img src="/accessibility.jpg" width="350" />
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  Image should have the descriptive alternative text.
-                </h4>
-                <code>
-                  &lt;img src="/accessibility2.jpg" width="350" alt="Accessibility" /&gt; <br>
-                  <img class="mt-3 mb-3" src="/accessibility.jpg" width="350" />
-                </code>
-              </div>
-
             </div>
 
             <div id="emptyheading" class="content">
@@ -173,17 +137,6 @@
               <code>
                 &lt;h1&gt;&lt;/h1&gt;
               </code>
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  Empty or Blank heading (h1 to h6) should not be rendered on front-end. It should have the descriptive
-                  heading. Something like below
-                </h4>
-                <code>
-                  &lt;h1&gt;Page title&lt;/h1&gt;
-                </code>
-              </div>
             </div>
 
             <div id="emptybtn" class="content">
@@ -193,19 +146,6 @@
               &lt;button class="btn btn-danger"&gt;&lt;/button&gt;
               <br><br>
               <button class="btn btn-danger"></button>
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  Empty button should not be rendred on the front-end. It should have some descriptive button name. Some
-                  thing like below.
-                </h4>
-                <code>
-                  &lt;button class="btn btn-danger"&gt;Submit&lt;/button&gt;
-                  <br><br>
-                  <button class="btn btn-danger">Submit</button>
-                </code>
-              </div>
             </div>
 
             <div id="labelissue" class="content">
@@ -219,37 +159,11 @@
                 &lt;/label&gt;<br>
               &lt;/form&gt;
             </code>
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                    Any form element should have descriptive with arialabe-by attribute. 
-                </h4>
-                <code>
-                  &lt;form&gt;<br>
-                    &lt;input type="text" arialabled-by="user" /&gt;<br>
-                    &lt;label arialabled-by="pass"&gt;
-                      &lt;input type="password" id="pass" /&gt;
-                    &lt;/label&gt;<br>
-                  &lt;/form&gt;
-                </code>
-              </div>
-
             </div>
 
             <div id="emptylink" class="content">
               <h1 class="mt-2 mb-2 text-danger"><strong class="red">Issue:</strong> Empty link</h4>
                 &lt;a href="#"&gt;&lt;/a&gt;
-                <div class="solution">
-                  <br>
-                  <h4 class="text-success">
-                    <strong style="color: blue;">Solution:</strong>
-                    Any empty link or anchor tag should not be rendered front-end. It should have some any descriptive link text.
-                  </h4>
-                  <code>
-                    &lt;a href="#"&gt;Read More Link&lt;/a&gt;
-                  </code>
-                </div>
             </div>
 
             <div id="linkimg" class="content">
@@ -266,24 +180,6 @@
                   src="/accessibility2.jpg"
                   alt="" class="img-responsive" width="250"&gt;
               &lt;/a&gt;
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  Any linked image should have descriptive alternative text. 
-                </h4><br/>
-                &lt;a href="#"&gt;
-                &lt;img
-                  src="/accessibility2.jpg"
-                  class="img-responsive" alt="Accessibility" width="250"&gt;
-              &lt;/a&gt;
-              <br><br>
-              &lt;a href="#"&gt;
-                &lt;img
-                  src="/accessibility2.jpg"
-                  alt="Accessibility" class="img-responsive" width="250"&gt;
-              &lt;/a&gt;
-              </div>
             </div>
 
             <div id="spacerimg" class="content">
@@ -292,42 +188,15 @@
               </h1>
               <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td><img src="spacer.jpg" width="100" height="10"></td>
+                  <td><img src="spacer.jpg" width="100" height="50"></td>
                 </tr>
               </table>
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  Any table if we are using any spacer image inside the td, it should have some alternative text.
-                </h4>
-                <table cellpadding="0" cellspacing="0" border="0">
-                  <tr>
-                    <td><img src="spacer.jpg" width="100" alt="Spacer Image" height="50"></td>
-                  </tr>
-                </table>
-              </div>
             </div>
 
             <div id="labelmissingcaptcha" class="content">
               <h1 class="text-danger"><strong class="red">Issue:</strong> Form label missing captcha</h1>
               <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response">
             </textarea>
-              <div class="solution">
-                <br>
-                <h4 class="text-success">
-                  <strong style="color: blue;">Solution:</strong>
-                  desc
-                </h4>
-                <code>
-                  $(window).on('load', function () {
-                    onloadCallback();
-               });
-              function onloadCallback() {
-                          $('#g-recaptcha-response').attr('title', "g-recaptcha-response");          
-                      }
-                </code>
-              </div>
             </div>
 
           </div>
